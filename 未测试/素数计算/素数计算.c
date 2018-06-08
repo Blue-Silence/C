@@ -3,7 +3,7 @@
 #include"Struct.h"
 struct struction * Create_List(int numberof);
 
-struct struction * ca(int num)
+struct struction * ca(int num)//num 为素数范围，返回链表头
     {
         void choose(struct struction * head);
 
