@@ -25,17 +25,17 @@ int main(void)
                     {
                         ch=getchar();
 
-                        if(ch='(')
+                        if(ch=='(')
                             a->sign=-3;
-                        else if(ch='/')
+                        else if(ch=='/')
                             a->sign=-2;
-                        else if(ch='-')
+                        else if(ch=='-')
                             a->sign=-1;
-                        else if(ch='+')
+                        else if(ch=='+')
                             a->sign=1;
-                        else if(ch='*')
+                        else if(ch=='*')
                             a->sign=2;
-                        else if(ch=')')
+                        else if(ch==')')
                             a->sign=3;
                         else
                             {
