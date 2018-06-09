@@ -17,12 +17,13 @@ sign定义：
             void x(struct struction * start,struct struction * end);
 
             struct struction * ptrnow=start->ptrnext;
+            struct struction * a;
 
             while(ptrnow->sign!=3)
                 {
                     if(ptrnow->sign==-3)
                         {    
-                            struct struction * a=ptrnow;
+                            a=ptrnow;
                             int mark=1;
 
                             while(mark)
@@ -48,13 +49,13 @@ sign定义：
                 {
                     if(ptrnow->sign==2||ptrnow->sign==-2)
                         {
-                            struct struction * a=ptrnow->ptrlast;
+                            a=ptrnow->ptrlast;
                             int mark=0;
                             ptrnow=ptrnow->ptrnext;
                             
                             while(1)
                                 {
-                                    if(ptrnow->sign==0)
+                                    if(ptrnow->sign!=2||ptrnow->sign!=-2)
                                         mark++;
                                     else
                                         mark--;
