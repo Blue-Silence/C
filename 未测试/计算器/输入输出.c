@@ -47,6 +47,7 @@ int main(void)
                 ptrnow=ptrnow->ptrnext;
             }
 
+        a->ptrnext=Create_List(1);
         Calculate(head->ptrnext,a);
         printf("%f",(head->ptrnext->num));
 

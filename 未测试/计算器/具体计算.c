@@ -50,6 +50,7 @@ sign定义：
                         {
                             struct struction * a=ptrnow->ptrlast;
                             int mark=0;
+                            ptrnow=ptrnow->ptrnext;
                             
                             while(1)
                                 {
@@ -81,7 +82,7 @@ sign定义：
                         }
                     else if(ptrnow->ptrnext->sign==-1)
                         {
-                            (ptrnow->ptrnext->ptrnext)->num-=ptrnow->num;
+                            (ptrnow->ptrnext->ptrnext)->num=ptrnow->num-(ptrnow->ptrnext->ptrnext)->num;
                             ptrnow=ptrnow->ptrnext->ptrnext;
                         }
                     
