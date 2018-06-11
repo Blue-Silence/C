@@ -1,18 +1,21 @@
 #include<stdio.h>
 #include"Struct.h"
-
+#include<stdlib.h>
+#define create() (struct struction * )malloc(sizeof(struct struction))
 int main(void)
     {
         void Calculate(struct struction * start,struct struction * end);
-        struct struction * Create_List(int numberof);
+        
 
-        struct struction * head=Create_List(2);
+        struct struction * head=create();
+        head->ptrnext=create();
+        head->ptrnext->ptrlast=head;
         (head->ptrnext)->sign=-3;
         struct struction * ptrnow=head->ptrnext;
         struct struction * a;
         while(1)
             {
-                a=ptrnow->ptrnext=Create_List(1);
+                a=ptrnow->ptrnext=create();
                 a->ptrlast=ptrnow;
                 a->ptrnext=NULL;
                 a->sign=0;
@@ -47,7 +50,7 @@ int main(void)
                 ptrnow=ptrnow->ptrnext;
             }
 
-        a->ptrnext=Create_List(1);
+        a->ptrnext=create();
         Calculate(head->ptrnext,a);
         printf("%f",(head->ptrnext->num));
 

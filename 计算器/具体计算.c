@@ -37,10 +37,12 @@ sign定义：
                                     else
                                         ;
                                 }
-                            Calculate(a,ptrnow);
+                            ptrnow=ptrnow->ptrnext;
+                            Calculate(a,ptrnow->ptrlast);
                         }
-                    
-                    ptrnow=ptrnow->ptrnext;
+
+                    else
+                        ptrnow=ptrnow->ptrnext;
                 }//处理括号
 
             ptrnow=start->ptrnext;
