@@ -2,7 +2,7 @@
 #include"Struct.h"
 #include<stdlib.h>
 #define create() (struct struction * )malloc(sizeof(struct struction))
-int main(void)
+int main(void)//输入算式并以字符/符号结尾
     {
         void Calculate(struct struction * start,struct struction * end);
         
